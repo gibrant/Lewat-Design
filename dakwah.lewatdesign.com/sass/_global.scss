@@ -1,0 +1,46 @@
+// Starting for global style
+*{
+    box-sizing: border-box;
+}
+html,
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+img{
+    width: 200px;
+}
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    width: 200px;
+}
+@media screen and (max-width: 1024px){
+    img{
+        width: 150px;
+    }
+    p{
+        font-size: 14px;
+        width: 150px;
+    }
+}
+@media screen and (max-width: 768px){
+    img{
+        width: 100px;
+    }
+    p{
+        font-size: 12px;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 512px){
+    .flex-item{
+        flex-direction: column;
+        p{
+            display: none;
+        }
+    }
+}

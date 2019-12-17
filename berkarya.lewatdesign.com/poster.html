@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tag & Title -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Poster Kajian - Lewat Design QODR.OR.ID</title>
+    <meta name="description" content="Poster Kajian - Lewat Design QODR.OR.ID">
+    <meta name="author" content="LewatDesign">
+    <meta name="keywords" content="Poster Kajian, Portfolio, Web Design, Front End Developer, Wordpress Developer, HTML5, CSS3, Freelancer, QODR, Komunitas IT Berbasis Pondok, Lisani.id, QODR.OR.ID">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Call CSS Bootstrap & Custom -->
+    <link rel="stylesheet" type="text/css" href="css/lewatdesign.css">
+    <link rel="stylesheet" type="text/css" href="dist/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/plugin/datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/plugin/color/lib/pickr.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="assets/images/logo/logo-color.png">
+
+    <!-- Add PopperJs, JQuery, MomentJs, etc -->
+    <script src="dist/plugin/color/lib/pickr.min.js"></script>
+    <script src="dist/jquery/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <!-- Main Page -->
+    <main id="page-wrap">
+        <div class="container">
+            <div class="row">
+                    <div class="userLogin text-right">
+                        <button><a href="#">Masuk Akun <i data-feather="user"></i></a></button>
+                    </div>
+
+                <!-- Poster -->
+                <div class="col-lg-6 col-md-12">
+                    <img src="assets/images/poster/Poster.png" alt="Poster" class="poster sticky-top">
+                </div>
+
+                <!-- Form -->
+                <div class="col-lg-6 col-md-12">
+                    <form action="index.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm();" id="myForm"> 
+                        <div class="title text-center">
+                            <a href="poster.html"><img src="assets/images/logo/logo-berkarya.png" alt="logo"></a>
+                            <h4 class="section-subheading">Kajian Apa yang,</h4 class="section-heading">
+                            <h1 class="section-heading">Antum Inginkan?</h1>
+                        </div>
+                        <div class="choose">
+
+                            <!-- Label for checkbox -->
+                            <ul class="flex">
+                                <li>
+                                    <label for="kajianrutin">
+                                        <div class="card mycard text-center">
+                                            <input type="checkbox" id="kajianrutin" name="Kajian_Rutin" class="checkbox_check">
+                                            <div class="checkmark">
+                                                <i class="check" data-feather="check"></i>
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="assets/images/poster/Kajian_Rutin.png" alt="Kajian Rutin">
+                                            </div>
+                                            <p class="desc">Kajian Rutin</p>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label for="kajiantematik">
+                                        <div class="card mycard text-center">
+                                            <input type="checkbox" id="kajiantematik" name="Kajian_Tematik" class="checkbox_check">
+                                            <div class="checkmark">
+                                                <i class="check" data-feather="check"></i>
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="assets/images/poster/Kajian_Tematik.png" alt="Kajian Tematik">
+                                            </div>
+                                            <p class="desc">Kajian Tematik</p>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label for="tablighakbar">
+                                        <div class="card mycard text-center">
+                                            <input type="checkbox" id="tablighakbar" name="Tabligh_Akbar" class="checkbox_check">
+                                            <div class="checkmark">
+                                                <i class="check" data-feather="check"></i>
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="assets/images/poster/Tabligh_Akbar.png" alt="Tabligh Akbar">
+                                            </div>
+                                            <p class="desc">Tabligh Akbar</p>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label for="safaridakwah">
+                                        <div class="card mycard text-center">
+                                            <input type="checkbox" id="safaridakwah" name="Safari_Dakwah" class="checkbox_check">
+                                            <div class="checkmark">
+                                                <i class="check" data-feather="check"></i>
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="assets/images/poster/Safari_Dakwah.png" alt="Safari Dakwah">
+                                            </div>
+                                            <p class="desc">Safari Dakwah</p>
+                                        </div>
+                                    </label>
+                                </li>
+
+                            </ul>
+                        </div><!-- .choose -->
+
+                        <!-- Input Form -->
+                        <div class="row">
+                            
+                            <!-- Select Form -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="Select_1">Siapakah yang ingin Antum Ajak untuk Menuntut Ilmu?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="Select_1" class="input-group-text"><i data-feather="send"></i></label>
+                                    </div>
+                                    <select name="select1" id="Select_1" class="form-control text-muted">
+                                        <option value="1">Untuk Umum</option>
+                                        <option value="2">Khusus Ikhwan</option>
+                                        <option value="3">Khusus Akhwat</option>
+                                    </select>
+                                </div>
+                            </section>
+                            
+                            <!-- Theme -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="theme">Apa Tema atau Judul yang ingin disampaikan?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="theme" class="input-group-text"><i data-feather="star"></i></label>
+                                    </div>
+                                    <input type="text" class="form-control" name="title" id="theme" placeholder="Masukkan Tema / Judul yang ingin kamu dapat">
+                                </div>
+                            </section>
+
+                            <!-- Tagline -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="tagline">Adakah Tagline Pelengkap Judul Kajian?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="tagline" class="input-group-text"><i data-feather="tag"></i></label>
+                                    </div>
+                                    <input type="text" class="form-control" name="tag" id="tagline" placeholder="Masukkan tagline pelengkap Judul Kajian">
+                                </div>
+                            </section>
+
+                            <!-- Whom -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="ustadz">Siapakah pengisi Kajian? <span>(Ustadz/Ustadzah)</span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="ustadz" class="input-group-text"><i data-feather="user"></i></label>
+                                    </div>
+                                    <input type="text" class="form-control" name="user" id="ustadz" placeholder="Isilah dengan nama penceramah untuk mengisi Kajian">
+                                </div>
+                            </section>
+
+                            <!-- Book -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="kitab">Adakah Kitab yang digunakan dalam Kajian?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="kitab" class="input-group-text"><i data-feather="book-open"></i></label>
+                                    </div>
+                                    <input type="text" class="form-control" name="book" id="kitab" placeholder="Silahkan masukkan kitab yang ingin digunakan dalam Kajian">
+                                </div>
+                            </section>
+
+                            <!-- Place -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="tempat">Dimana Tempat Kajian akan diselenggarakan?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="tempat" class="input-group-text"><i data-feather="map-pin"></i></label>
+                                    </div>
+                                    <input type="text" class="form-control" name="address" id="tempat" placeholder="Dimana Tempat Kajian akan diselenggarakan?">
+                                </div>
+                            </section>
+
+                            <!-- Date & Time -->
+                            <section class="col-lg-12 input-form">
+                                <div class="form-row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="label" for="datepicker">Tanggal diselenggarakan Kajian?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <label for="datepicker" class="input-group-text"><i data-feather="calendar"></i></label>
+                                            </div>
+                                            <input type="text" class="form-control" name="date" id="datepicker" placeholder="Tanggal">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="label" for="timepicker">Waktu diselenggarakan Kajian?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <label for="timepicker" class="input-group-text"><i data-feather="clock"></i></label>
+                                            </div>
+                                            <input type="text" class="form-control" name="time" id="timepicker" placeholder="Waktu">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Whom 2 -->
+                            <section class="col-lg-12 input-form">
+                                <div class="form-row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="label" for="name">Siapa Penyelenggara Kajian?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <label id="coba" for="name" class="input-group-text"><i data-feather="info"></i></label>
+                                            </div>
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nama">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="label" for="phone">Kontak yang bisa dihubungi?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <label id="coba" for="phone" class="input-group-text"><i data-feather="phone"></i></label>
+                                            </div>
+                                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Nomor Hp/Whatsapp">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Information -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="info">Adakah Informasi Tambahan yang perlu disampaikan?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="info" class="input-group-text"><i data-feather="plus-square"></i></label>
+                                    </div>
+                                    <input type="text" class="form-control" name="place" id="info" placeholder="Silahkan masukkan informasi tambahan yang ingin disampaikan">
+                                </div>
+                            </section>
+
+                            <!-- Donation -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="credit-card">Adakah Informasi Donasi untuk Kajian?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="credit-card" class="input-group-text"><i data-feather="credit-card"></i></label>
+                                    </div>
+                                    <input type="text" class="form-control" name="card" id="credit-card" placeholder="Silahkan masukkan informasi donasi anda">
+                                </div>
+                            </section>
+
+                            <!-- Menu & Streaming -->
+                            <section class="col-lg-12 input-form">
+                                <div class="form-row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="label" for="menu">Disediakan Menu Buka Puasa?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <label for="menu" class="input-group-text"><i data-feather="coffee"></i></label>
+                                            </div>
+                                            <input type="text" class="form-control" name="menu" id="menu" placeholder="Masukkan pendapat anda">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="label" for="stream">Apakah ada Streaming Online?</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <label for="stream" class="input-group-text"><i data-feather="video"></i></label>
+                                            </div>
+                                            <input type="text" class="form-control" name="stream" id="stream" placeholder="Masukkan pendapat anda">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Choose File Image or etc -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="attachfile">Adakah File/image Tambahan yang perlu disampaikan di Poster ini?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="attachfile" class="input-group-text"><i data-feather="paperclip"></i></label>
+                                    </div>
+                                    <input type="file" class="form-control" name="file" id="attach" placeholder="Dimana Tempat Kajian akan diselenggarakan?">
+                                    <div class="form-control text-muted" id="attachfile">No file Choosen as you can do that.</div>
+                                </div>
+                            </section>
+
+                            <!-- Size Poster You Want -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="radioBtn">Size Poster yang diinginkan?</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="radioBtn" class="input-group-text"><i data-feather="maximize"></i></label>
+                                    </div>
+                                    <div class="form-control" id="radio">
+                                        <ul class="myradio">
+                                            <li>
+                                                <label class="control control--radio text-muted">Square / 1:1
+                                                    <input type="radio" name="radio" checked="checked" id="radioBtn">
+                                                    <div class="control__indicator"></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="control control--radio text-muted">Resume / A4
+                                                    <input type="radio" name="radio" id="radioBtn">
+                                                    <div class="control__indicator"></div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Base Color -->
+                            <section class="col-lg-12 input-form">
+                                <label class="label" for="colorpicker">Base Color yang diinginkan untuk Poster? <span>(Kosongkan jika terserah Creator)</span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label for="colorpicker" class="input-group-text"><i data-feather="droplet"></i></label>
+                                    </div>
+                                    <div class="center form-control" id="colorpicker">
+                                        <div class="color-picker"></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                        <hr class="my-4">
+
+                        <!-- Greet Section -->
+                        <section class="row greet-section">
+                            <div class="col-lg-12">
+                                <div class="form-row">
+                                    <div class="icon">
+                                        <label class="control control--checkbox text-muted">   
+                                            <input type="checkbox" name="checkbox"/>
+                                            <div class="control__indicator"></div>
+                                        </label>
+                                    </div>
+                                    <div class="text-center col great">
+                                        <p>
+                                        Bismillah, dengan ini semoga semakin banyak yang semangat menuntut ilmu.<br>
+                                        Semoga Allah memberikan keberkahan dan ampunan kepada Creator ini.<br>
+                                        dan Semoga Allah senantiasa memberikan kita taufik dan hidayahNya<br>
+                                        untuk kita bisa istiqamah menuntut ilmu.<br>
+                                        <u><i>Aamiin ya Rabbal'alamiin</i></u>
+                                        </p> 
+                                    </div>
+                                </div>
+                            </div> 
+                        </section>
+
+                        <!-- Captcha -->
+                        <section class="form-row flex">
+                            <div class="captcha">
+                                <input type="text" value="2" class="form-control form-control-lg text-center readonly" readonly>
+                            </div>
+                            <h3 class="icon">+</h3>
+                            <div class="captcha">
+                                <input type="text" value="2" class="form-control form-control-lg text-center readonly" readonly>
+                            </div>
+                            <h3 class="icon">=</h3>
+                            <div class="captcha">
+                                <input type="text" class="form-control form-control-lg text-center">
+                            </div>
+                            <div class="col">
+                                <input type="button" name="btn" value="Submit" id="submitBtn" class="form-control form-control-lg btn btn-primary bg-cyan">
+                            </div>
+                        </section>
+                    </form>
+
+                    <hr class="line-2">
+
+                    <!-- Footer -->
+                    <footer class="text-center" id="footer">
+                        <!-- Nav list -->
+                        <section id="navlist">
+                            <ul class="nav-list">
+                                <li><a href="#">Recommended</a></li>
+                                -
+                                <li><a href="#">Blog</a></li>
+                                -
+                                <li><a href="#">Info</a></li>
+                                -
+                                <li><a href="#">Contact</a></li>
+                                -
+                                <li><a href="#">Subscribe</a></li>
+                            </ul>
+                            <p>
+                                @Copyright 2018, Lewatdesign. <i id="code" data-feather="code"></i> with <i id="heart" data-feather="heart"></i> in <b><a href="#">QODR HQ</a></b>
+                            </p>
+                            <p>
+                                Follow us on <b><a href="#">Instagram</a></b> and <b><a href="#">Dribble</a></b>
+                            </p>
+                        </section>
+
+                        <!-- Button -->
+                        <section id="button">
+                            <a id="backtotop" href="#">Back to top <i data-feather="arrow-up"></i></a>
+                            <a id="share" href="#">Share Yuk! <i data-feather="share-2"></i></a>
+                            <div class="support">
+                                <div class="bubble">
+                                    <div class="speech-bubble">
+                                        <p>Jika antum bingung atau mengalami kendala Silahkan kontak WhatsApp Admin <b>083147484114</b></p>
+                                    </div>
+                                </div>
+                                <div class="spbtn">
+                                    <img src="assets/images/logo/support.svg" alt="support">
+                                </div>
+                            </div>
+                        </section>
+                    </footer>
+                </div>
+            </div>
+        </div><!-- .row --> 
+    </main><!-- .container -->
+
+    <!-- Script -->
+    <script src='js/app.min.js'></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="js/lewatdesign.js"></script>
+    <script src="dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="dist/plugin/datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+</body>
+</html>

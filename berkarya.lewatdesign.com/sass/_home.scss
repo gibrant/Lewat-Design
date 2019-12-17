@@ -1,0 +1,52 @@
+// Starting Styling Home Lewat Design Template
+#home{
+    background: url(../assets/images/home/bg-cover.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+        margin: auto;
+        width: 420px;
+        p{
+            font-style: italic;
+            color: $white;
+            font-size: 18px;
+        }
+    }
+    .myBtn{
+        display: flex;
+        list-style-type: none;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 3em;
+    }
+    .btn:focus{
+        box-shadow: 0 0 0 transparent;
+    }
+    .btn-green{
+        width: 170px;
+        height: 50px;
+        border-radius: 2px;
+    }
+    .btn-transparent{
+        color: $white;
+        font-style: underline;
+        background: none;
+    }
+    .fluid{
+        margin: 3em 0;
+    }
+}
+@media screen and (max-width: 992px){
+    #page-wrap{
+        .content{
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}

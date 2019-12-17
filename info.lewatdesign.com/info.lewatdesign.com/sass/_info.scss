@@ -1,0 +1,293 @@
+// Start for this template
+#page-wrap{
+    margin-top: 60px;
+    .header{
+        width: 100%;
+        .title{
+            margin-bottom: 74px;
+            img{
+                display: block;
+                position: relative;
+                width: 194.6px;
+                height: 80px;
+                margin: auto;
+                padding-bottom: 40px;
+                box-sizing: content-box; 
+            }
+            h2{
+                display: inline;
+                font-weight: 900;
+                color: $verydarkgrey;
+                @include box-shadow(inset 0 -15px 0 0 $lightbluesky);
+            }
+        }
+        .myNavbar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 74px;
+            .nav-tabs{
+                position:relative;
+                border:none!important;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .nav-tabs li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin:0px!important;
+                width: 157px;
+                height: 50px;
+            }
+            .nav-tabs li a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                margin-right: 0px!important;
+                width: 100%;
+                height: 100%;
+                border: none!important;
+                color: $grey;
+            }
+            .nav-tabs a:hover{
+                border:none;
+            }
+            .slider{
+                display: inline-block;
+                width: 157px;
+                height: 50px;
+                position: absolute;
+                @include background(linear-gradient(to right, #00e0ff, #00beff));
+                @include transition(all .4s linear);
+                @include border-radius(100px);
+                @include box-shadow(0 10px 20px 0 rgba(0, 190, 255, 0.2));
+            }
+            .nav-tabs .active{
+                background-color:transparent!important;
+                border:none!important;
+                color: $white!important;
+            }
+            .nav-active{
+                display: none;
+            }
+            @media screen and (max-width: 992px){
+                .slider{
+                    display: none;
+                }
+                .nav-active{
+                    display: inline-block;
+                    width: 157px;
+                    height: 50px;
+                    position: absolute;
+                    @include background(linear-gradient(to right, #00e0ff, #00beff));
+                    @include transition(all .4s linear);
+                    @include border-radius(100px);
+                    @include box-shadow(0 10px 20px 0 rgba(0, 190, 255, 0.2));
+                }
+            }
+        }
+    }
+    .photolink{ 
+        @include transition(.5s all ease);
+        .tab-pane{
+            .card{
+                @include transition(.5s all ease-in);
+                animation: flexible .8s;
+            }
+        }
+        @keyframes flexible{
+            from{
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            to{
+                opacity: 1;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .row{
+            .col-md-4{
+                padding-left: 0;
+                padding-right: 0;
+                .card{
+                    overflow: hidden;
+                    border: none;
+                    background: none;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    .card-body{
+                        position: relative;
+                        overflow: hidden;
+                        margin: 18.5px;
+                        padding: 0;
+                        background: $white;
+                        @include border-radius(5px);
+                        @include box-shadow(0 5px 10px $verylightgrey);
+                        @include transition(.5s all ease);
+                        &:hover{
+                            @include box-shadow(0 5px 20px $verylightgrey);
+                        }
+                        .card-img-top{
+                            @include transition(.5s all ease);
+                        }
+                        .card-hover:hover ~ .card-img-top{
+                            @include transform(scale(1.8));
+                            z-index: 0;
+                            position: relative;
+                        }
+                        .card-hover:hover ~ .sub-title{
+                            opacity: 0;
+                        }
+                        .card-hover{
+                            overflow: hidden;
+                            padding: 16px 43px;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: flex-end;
+                            color: $white;
+                            position: absolute;
+                            opacity: 0;
+                            z-index: 1;
+                            background: linear-gradient(to bottom, #00bfffbb, #32bbffbb, #0088ffbb);
+                            @include transition(.5s all ease);
+                            &:hover{
+                                opacity: 1;
+                            }
+                            .card-title{
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: rgb(223, 208, 0);
+                            }
+                            .card-text{
+                                margin: 0;
+                                padding: 0;
+                                font-size: 16px;
+                                font-style: italic;
+                            }
+                            .category{
+                                margin-top: 10px;
+                                margin-bottom: 0;
+                            }
+                            #arrow-right{
+                                color: rgb(223, 208, 0);
+                                position: absolute;
+                                right: 40px;
+                            }
+                        }
+                        @media screen and (max-width: 992px){
+                            .card-hover{
+                                padding: 14px 32px;
+                                .card-text{
+                                    margin: 0;
+                                    padding: 0;
+                                    font-size: 14px;
+                                    font-style: italic;
+                                }
+                                .category{
+                                    font-size: 14px;
+                                    margin-top: 10px;
+                                    margin-bottom: 0;
+                                }
+                                #arrow-right{
+                                    color: rgb(223, 208, 0);
+                                    right: 25px;
+                                }
+                            }
+                            .card-hover:hover ~ .card-img-top{
+                                @include transform(scale(1.8));
+                                transform-origin: top;
+                                z-index: 0;
+                                position: relative;
+                            }
+                        }
+                        .sub-title{
+                            @include transition(.3s all ease);
+                            position: relative;
+                            z-index: 100;
+                            padding: 1em;
+                            .card-title{
+                                color: $bluesky;
+                                font-size: 18px;
+                            }
+                            .card-text{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }  
+            }
+        }
+    }
+    #footer{
+        width: 100%;
+        padding: 2em 0;
+        font-size: 12px;
+        .nav-list{
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            font-weight: bold;
+            color: $grey;
+            padding: 0;
+            li{
+                margin: 0 .5em;
+                a{
+                    color: $grey;
+                    @include transition(.3s all ease-in);
+                    @include box-shadow(inset 0 -1px 0 0 $grey);
+    
+                }
+                a:hover{
+                    color: $bluesky;
+                    text-decoration: none;
+                    @include box-shadow(inset 0 -5px 0 0 $lightbluesky);
+                }
+            }
+        }
+        a{
+            color: $grey;
+            @include transition(.3s all ease-in);
+    
+        }
+        a:hover{
+            text-decoration: none;
+            color: $bluesky;
+        }
+    }
+    #footer .nav-list, #footer p{
+        margin-bottom: .5em;
+    }
+    #code{
+        opacity: .2;
+        margin: 0 .2em;
+        width: 16px;
+    }
+    #heart{
+        color: $love;
+        margin: 0 .2em;
+        width: 12px;
+    }
+    #button{
+        position: fixed;
+        bottom: 6em;
+        right: 1em;
+        font-size: 14px;
+        z-index: 1001;
+        a{
+            opacity: .5;
+            display: block;
+            cursor: pointer;
+        }
+        a:hover{
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Lewat Design - SignIn</title>
+    <meta name="description" content="Poster Kajian - Lewat Design QODR.OR.ID">
+    <meta name="author" content="LewatDesign">
+    <meta name="keywords" content="Poster Kajian, Portfolio, Web Design, Front End Developer, Wordpress Developer, HTML5, CSS3, Freelancer, QODR, Komunitas IT Berbasis Pondok, Lisani.id, QODR.OR.ID">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Call CSS Bootstrap & Custom -->
+    <link rel="stylesheet" type="text/css" href="css/lewatdesign.css">
+    <link rel="stylesheet" type="text/css" href="dist/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" href="assets/images/logo/logo-color.png">
+    <script src="dist/jquery/jquery-3.3.1.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <main class="loginForm">
+
+        <!-- Attention -->
+        <div class="attention text-center fluid">
+            <div class="content">
+                <a href="poster.html"><img src="assets/images/logo/logo-berkarya--white.png" alt="logo"></a>
+                <h2 class="quote my-4">Quote</h2>
+                <p>Rasulullah Shallallahu'alaihi Wasallam bersabda</p>
+                <h4 class="hadits">خَيْرُ الناسِ أَنْفَعُهُمْ لِلناسِ</h4>
+                <p>"<b>Sebaik-baik manusia</b> adalah yang <b>paling <br>bermanfaat bagi manusia</b>"</p>
+                <p>(HR.Ahmad, ath-Thabrani, ad-Daruqutni. Hadits ini <br>dihasankan oleh al-Albani di dalam <br>Shahihul Jami' no:3289).</p>
+                <p class="web-link">Selengkapnya:</p>
+                <p><a href="https://muslimah.or.id/6435-pribadi-yang-bermanfaat.html" target="_blank">https://muslimah.or.id/6435-pribadi-yang-bermanfaat.html</a></p>
+            </div>
+        </div>
+
+        <!-- Form Login -->
+        <div class="login fluid">
+            <form action="index.php" method="post"  enctype="multipart/form-data" onsubmit="return validateForm();" class="form-login">
+                <h3>Ahlan Wa Sahlan,</h3>
+                <p class="blur my-4">Silahkan Login untuk Pesan Poster Antum</p>
+                <ul class="login-group">
+                <li class="email my-4">
+                    <label class="label" for="emailform">Email</label>
+                    <input type="email" class="form-control blur" id="emailform" placeholder="Masukkan E-mail Antum!">
+                </li>
+                <li class="password my-4">
+                    <label class="label" for="passwordform">Password</label>
+                    <input type="password" class="form-control blur" id="passwordform" placeholder="Masukkan password Antum!">
+                </li>
+                <li class="remember-me my-4">
+                <label class="control control--checkbox text-muted">Remember Me
+                    <input type="checkbox" name="checkbox" id="Remember_me">
+                    <div class="control__indicator"></div>
+                </label>
+                </li>
+                <li class="submit my-4">
+                    <input type="button" name="btn" value="Sign In" id="submitBtn" class="form-control form-control-lg btn btn-primary btn-cyan">
+                </li>
+                <li class="forget text-center my-4">
+                    <a href="#forgot">Antum Lupa Password?</a>
+                </li>
+                </ul>
+            </form>
+
+            <hr class="line-2">
+
+            <!-- Footer -->
+            <footer class="text-center" id="footer">
+                <!-- Nav list -->
+                <section id="navlist">
+                    <ul class="nav-list">
+                        <li><a href="#">Recommended</a></li>
+                        -
+                        <li><a href="#">Blog</a></li>
+                        -
+                        <li><a href="#">Info</a></li>
+                        -
+                        <li><a href="#">Contact</a></li>
+                        -
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                    <p>
+                        @Copyright 2018, Lewatdesign. <i id="code" data-feather="code"></i> with <i id="heart" data-feather="heart"></i> in <b><a href="#">QODR HQ</a></b>
+                    </p>
+                    <p>
+                        Follow us on <b><a href="#">Instagram</a></b> and <b><a href="#">Dribble</a></b>
+                    </p>
+                </section>
+            </footer>
+        </div>
+    </main>
+    <!-- Script -->
+    <script>
+        feather.replace()
+    </script>
+    <script src="js/lewatdesign.js"></script>
+    <script src="dist/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

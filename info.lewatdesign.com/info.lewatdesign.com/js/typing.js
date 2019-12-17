@@ -1,0 +1,1 @@
+var typed3=new Typed('.typed',{strings:['Rekomendasi Hanya Untuk Antum...'],typeSpeed:50,backSpeed:50,backDelay:500,startDelay:1000,smartBackspace:!0,loop:!1})

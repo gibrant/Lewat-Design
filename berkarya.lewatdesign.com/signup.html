@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Lewat Design - SignUp</title>
+    <meta name="description" content="Poster Kajian - Lewat Design QODR.OR.ID">
+    <meta name="author" content="LewatDesign">
+    <meta name="keywords" content="Poster Kajian, Portfolio, Web Design, Front End Developer, Wordpress Developer, HTML5, CSS3, Freelancer, QODR, Komunitas IT Berbasis Pondok, Lisani.id, QODR.OR.ID">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Call CSS Bootstrap & Custom -->
+    <link rel="stylesheet" type="text/css" href="css/lewatdesign.css">
+    <link rel="stylesheet" type="text/css" href="dist/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" href="assets/images/logo/logo-color.png">
+    <script src="dist/jquery/jquery-3.3.1.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <main class="signupForm">
+
+        <!-- Modal1 -->
+        <section class="modal fade popup" id="myModal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <img src="assets/images/popup/icon-email@2x.png" alt="email" class="email_img">
+                        <button type="button" class="close" data-toggle="modal" data-target="#myModal2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>'Afwan,</h5>
+                        <p><a href="#"><i>Satu langkah lagi</i></a></p>
+                        <p>Silahkan Cek Email Antum untuk melakukan verifikasi Akun ini</p>
+                        <p><i>Jazaakumullahu Khayran :)</i></p>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </section><!-- /.modal -->
+
+        <!-- Modal2 -->
+        <section class="modal fade popup" id="myModal2">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <img src="assets/images/popup/icon-alhamdulillah@2x.png" alt="Alhamdulillah" class="email_img">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Alhamdulillah,</h5>
+                            <p>Akun <a href="#"><i>berkarya.lewatdesign.com</i></a> Antum sudah Aktif. Silahkan Memesan Poster yang antum Inginkan.</p>
+                            <p><i>Baarakallahu Fiikum :)</i></p>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </section><!-- /.modal -->
+        
+        <!-- Attention -->
+        <section class="attention text-center fluid">
+            <div class="content">
+                <a href="poster.html"><img src="assets/images/logo/logo-berkarya--white.png" alt="logo"></a>
+                <h3 class="quote my-4">PERHATIAN</h3>
+                <ol class="attention-list text-left">
+                    <li>
+                        <p>Dimohon untuk <b>mengisi data diri terlebih dahulu</b> sebelum melakukan pemesanan poster.</p>
+                    </li>
+                    <li>
+                        <p>Dimohon mengisi data diri dengan benar adanya, <b>Nama Asli/panitia kajian, E-mail untuk verifikasi akun, Nomor Whatsapp</b> untuk direct/transfer file poster kepada pemesan.</p>
+                    </li>
+                    <li>
+                        <p>Dimohon untuk memesan poster <b>minimal 1 pekan sebelum kajian diselenggarakan</b>, untuk memaksimalkan publikasi dan <b>pembuatan poster minimal 2-3 hari</b> sesuai jumlah pesanan masuk.</p>
+                    </li>
+                    <li>
+                        <p>Jika website ini <b>memberikan manfaat</b>, dimohon untuk <b>menyebarluaskan website ini</b>. Semoga semakin banyak yang mendapatkan manfaatnya</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Sign Up Form -->
+        <section class="signup fluid">
+            <form action="index.php" method="post"  enctype="multipart/form-data" onsubmit="return validateForm();" class="form-signup" id="myForm">
+                <h3>Ahlan Wa Sahlan,</h3>
+                <p class="blur my-4">Silahkan Antum mengisi form dibawah ini dengan data yang benar adanya, agar memudahkan proses pengerjaan dan pengiriman poster.</p>
+                <p class="blur my-4">Antum sudah punya akun? <a href="signin.html" class="loginlink">Silahkan Login</a></p>
+                <ul class="signup-group">
+                    <li class="form-row my-4">
+                        <div class="col-sm-6">
+                            <label class="label" for="frontname">Nama Depan</label>
+                            <input type="text" name="front" class="form-control blur" id="frontname" placeholder="Masukkan Nama Depan Antum">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="label" for="behindname">Nama Belakang</label>
+                            <input type="text" name="behind" class="form-control blur" id="behindname" placeholder="Masukkan Nama Belakang Antum">
+                        </div>
+                    </li>
+                    <li class="form-row my-4">
+                        <div class="col-sm-6">
+                            <label class="label" for="nomorwa">Nomor Whatsapp</label>
+                            <input type="tel" name="phone" class="form-control blur" id="nomorwa" value="+62">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="label" for="emailform">E-mail</label>
+                            <input type="email" name="email" class="form-control blur" id="emailform" placeholder="Masukkan E-mail Antum!">
+                        </div>
+                    </li>
+                    <li class="form-row my-4">
+                        <div class="col-sm-6">
+                            <label class="label" for="password">Password</label>
+                            <input type="password" name="password" class="form-control blur" id="password" placeholder="Masukkan Password Antum!">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="label" for="passwordconfirm">Confirm Password</label>
+                            <input type="password" name="confirm" class="form-control blur" id="passwordconfirm" placeholder="Konfirmasi Password Antum!">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="control control--checkbox text-muted">Saya mengisi data dengan benar dan siap melakukan verifikasi e-mail
+                            <input type="checkbox" name="checkbox" id="Remember_me">
+                            <div class="control__indicator"></div>
+                        </label>
+                        <label class="control control--checkbox text-muted">Saya menyetujui peraturan yang ada
+                            <input type="checkbox" name="checkbox" id="Remember_me">
+                            <div class="control__indicator"></div>
+                        </label>
+                    </li>
+                    <li class="fluid">
+                        <input type="button" name="btn" value="Sign Up" id="submitBtn" class="mypad btn btn-lg btn-primary btn-cyan">
+                    </li>
+                </ul>
+            </form>
+
+            <hr class="line-2">
+
+            <!-- Footer -->
+            <footer class="text-center signupfooter" id="footer">
+                <!-- Nav list -->
+                <section id="navlist">
+                    <ul class="nav-list">
+                        <li><a href="#">Recommended</a></li>
+                        -
+                        <li><a href="#">Blog</a></li>
+                        -
+                        <li><a href="#">Info</a></li>
+                        -
+                        <li><a href="#">Contact</a></li>
+                        -
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                    <p>
+                        @Copyright 2018, Lewatdesign. <i id="code" data-feather="code"></i> with <i id="heart" data-feather="heart"></i> in <b><a href="#">QODR HQ</a></b>
+                    </p>
+                    <p>
+                        Follow us on <b><a href="#">Instagram</a></b> and <b><a href="#">Dribble</a></b>
+                    </p>
+                </section>
+            </footer>
+        </section>
+    </main>
+    <!-- Script -->
+    <script>
+        feather.replace()
+    </script>
+    <script src="js/lewatdesign.js"></script>
+    <script src="dist/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+// Main Page Poster
+#page-wrap {
+    margin: 3em 0;
+}
+// Style for user login
+.userLogin{
+    position: absolute;
+    top: 2;
+    right: 1em;
+    font-size: 14px;
+    opacity: .5;
+    width: 100%;
+    button{
+        background: none;
+        border: none;
+    }
+    a{
+        display: block;
+        cursor: pointer;
+        color: $grey;
+    }
+    a:hover{
+        color: $black;
+        text-decoration: none;
+    }
+}
+@media screen and (max-width: 992px){
+    .userLogin{
+        position: relative;
+        top: -1em;
+        right: 1em;
+        margin: auto;
+        a{
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+    }
+}
+// Style for Poster
+.poster{
+    width: 100%;
+    padding-right: 0 !important;
+    @include box-shadow(0 0 50px rgba(0, 187, 255, 0.2));
+}
+// Style for the Title Section
+.title {
+    margin-bottom: 1.5em;
+    img{
+        width: 219px;
+        height: auto;
+        margin: 3em 0;
+    }
+}
+.section-heading, .section-subheading{
+    margin: 0;
+    padding: 0;
+}
+.section-subheading{
+    font-weight: 300;
+}
+@media screen and (max-width: 992px){
+    .title{
+        margin: 1.5em 0;
+    }
+}
+// Style for Kajian List
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    li{
+        list-style-type: none;
+        margin: 1em .5em;
+    }
+    // Style Card
+    .mycard{
+        width: auto;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        @include border-radius(10px);
+        .card-body{
+            padding: 10px 15px;
+            height: 100px;
+        }
+    }
+    // Image Card
+    img{
+        width: 80px;
+    }
+    // Description
+    .desc{
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    // Hide checkbox input
+    .checkbox_check{
+        display: none;
+    }
+    // Style checkbox label
+    .checkmark{
+        border: $borderBlue;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include border-radius(10px);
+        opacity: 0;
+        // Icon check
+        .check{
+            background: $bluesky;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            color: $white;
+            @include border-radius(50%);
+        }
+    }
+}
+.choose label input:checked ~ .checkmark{
+    opacity: 1;
+}
+// Styling Form Input 
+.input-form{
+    margin-bottom: 2em;
+    font-size: 14px;
+    .label{
+        margin-left: 2.5em;
+        font-weight: 600;
+        font-size: 14px;
+        color: $darkgrey;
+        @include transition(.3s all ease-in-out);
+    }
+    .label span{
+        font-weight: 300;
+        font-family: $lato;
+        font-style: italic;
+    }
+    .form-control{
+        border: none;
+        border-bottom: $borderDarkGrey;
+        background: none;
+        display: block;
+        position: relative;
+        opacity: .5;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        @include border-radius(0);
+        @include transition(.3s all ease-in-out);
+    }
+    .form-control:focus{
+        background: none;
+        opacity: 1;
+        color: $bluesky;
+        border-bottom: $borderBlue;
+        @include box-shadow(0 0 0 transparent);
+    }
+    .input-group-text{
+        border: none;
+        background: none;
+        width: 40px;
+        color: $darkgrey;
+        opacity: .2;
+        padding: 0;
+        @include transition(.3s all ease-in-out);
+    }
+}
+.label.light, .input-group-text.light{
+    opacity: 1;
+    color: $bluesky;
+}
+// Styling for Input type file
+#attach{
+    display: none;
+}
+#attachfile{
+    width: 90%;
+    height: 5em;
+    padding-top: 2.8em;
+    cursor: pointer;
+}
+.icon-attach{
+    display: block;
+}
+// Radio & checkbox input styling
+#radio{
+    opacity: 1;
+    border: none;
+    height: 100%;
+} 
+.myradio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+    width: 90%;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    label{
+        margin: 0;
+        font-weight: 400;
+    }
+}
+.control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.control input {
+    position: absolute;
+    z-index: -1;
+    display: none;
+}
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: $verylightgrey;
+}
+.control--radio .control__indicator {
+    @include border-radius(50%);
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+    background: #cccccc;
+}
+.control input:checked ~ .control__indicator {
+    background: $bluesky;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+    background: $bluesky;
+}
+.control input:disabled ~ .control__indicator {
+    background: $verylightgrey;
+    opacity: .6;
+    pointer-events: none;
+}
+.control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+.control--checkbox .control__indicator:after {
+    left: 9px;
+    top: 3px;
+    width: 4px;
+    height: 12px;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    @include transform(rotate(45deg));
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: $lightgrey;
+}
+.control--radio .control__indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 6px;
+    @include border-radius(50%);
+    background: $white;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+    background: $lightgrey;
+}
+// Color Picker Style
+.center{
+    width: 100%;
+    height: 5em;
+    .pickr{
+        width: 100%;
+        height: 5em;
+        .pcr-button{
+            width: 100%;
+            height: 6em;
+        }
+    }
+}
+#colorpicker{
+    opacity: 1;
+    border: none;
+    margin-bottom: 2em;
+}
+// Horizontal Line Style
+hr.my-4{
+    position: relative;
+}
+hr.my-4:before{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 10px;
+    border-bottom: 1px solid $bluesky;
+    margin: auto;
+    right: 0;
+    left: 0;
+    opacity: .5;
+}
+// Style for Greeting
+.greet-section{
+    margin: 3em 0;
+    .great{
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+}
+// Captcha
+.form-row{
+    .captcha{
+        width: 50px;
+        margin: 0 1em;
+    }
+    .readonly[readonly]{
+        background: $white;
+    }
+    .bg-cyan{
+    background-color: $bluesky;
+    color: $white;
+    font-size: 20px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    margin: .5em 1em;
+    }
+}
+@media screen and (max-width: 876px){
+    .form-row{
+        .captcha{
+            margin: 0 .3em;
+        }
+        .bg-cyan{
+            margin: 0;
+        }
+    }
+}
+.icon{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+}
+// Footer
+#footer{
+    width: 100%;
+    padding: 2em 0;
+    font-size: 12px;
+    .nav-list{
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        font-weight: bold;
+        color: $grey;
+        padding: 0;
+        li{
+            margin: 0 .5em;
+            a{
+                color: $grey;
+                @include transition(.3s all ease-in);
+                @include box-shadow(inset 0 -1px 0 0 $grey);
+
+            }
+            a:hover{
+                color: $bluesky;
+                text-decoration: none;
+                @include box-shadow(inset 0 -5px 0 0 $lightbluesky);
+            }
+        }
+    }
+    a{
+        color: $grey;
+        @include transition(.3s all ease-in);
+
+    }
+    a:hover{
+        text-decoration: none;
+        color: $bluesky;
+    }
+}
+#footer .nav-list, #footer p{
+    margin-bottom: .5em;
+}
+#code{
+    opacity: .2;
+    margin: 0 .2em;
+    width: 16px;
+}
+#heart{
+    color: $love;
+    margin: 0 .2em;
+    width: 12px;
+}
+#button{
+    position: fixed;
+    bottom: 6em;
+    right: 1em;
+    font-size: 14px;
+    z-index: 1001;
+    a{
+        opacity: .5;
+        display: block;
+        cursor: pointer;
+    }
+    a:hover{
+        color: $black;
+    }
+    .support{
+        .bubble{
+            .speech-bubble {
+                padding: 10px;
+                position: relative;
+                background: $white;
+                max-width: 200px;
+                position: fixed;
+                right: 100px;
+                bottom: 60px;
+                @include border-radius(5px);
+                @include box-shadow(5px 5px 30px rgba(73, 201, 248, 0.4));
+                // display: none;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 55%;
+                    width: 0;
+                    height: 0;
+                    border: 15px solid transparent;
+                    border-left-color: $white;
+                    border-right: 0;
+                    border-bottom: 0;
+                    margin-top: -10px;
+                    margin-right: -15px;
+                }
+            }
+        }
+        .spbtn{
+            margin: auto;
+            width: 35px;
+            height: 35px;
+            background-color: #ffcc00;
+            @include border-radius(50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img{
+                width: 18px;
+                height: auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    #button{
+        position: relative;
+        bottom: 1em;
+        right: 0;
+        left: 0;
+        margin: auto;
+        a{
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+        .support{
+            .bubble{
+                .speech-bubble {
+                    padding: 10px;
+                    position: relative;
+                    background: $white;
+                    max-width: 200px;
+                    position: fixed;
+                    bottom: 150px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    @include border-radius(5px);
+                    @include box-shadow(5px 5px 30px rgba(73, 201, 248, 0.4));
+                    display: none;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 109%;
+                        bottom: 0;
+                        left: 50%;
+                        width: 0;
+                        height: 0;
+                        border: 15px solid transparent;
+                        border-top-color: $white;
+                        border-bottom: 0;
+                        margin-left: -15px;
+                        margin-bottom: -15px;
+                    }
+                }
+            }
+        }
+    }
+}

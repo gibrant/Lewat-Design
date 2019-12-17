@@ -1,0 +1,32 @@
+// Starting build the variable for this template
+@mixin box-shadow($border) {
+    -ms-box-shadow: $border;
+    -webkit-box-shadow: $border;
+    -moz-box-shadow: $border;
+    -o-box-shadow: $border;
+    box-shadow: $border;
+}
+
+@mixin transform($transform) {
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin border-radius($border-radius) {
+    -ms-border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin transition($transition){
+    -ms-transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}

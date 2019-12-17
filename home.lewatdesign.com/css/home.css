@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+p {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+#page-wrap {
+  background: url(../assets/images/bg-cover.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page-wrap .content {
+  margin: auto;
+  width: 420px;
+}
+#page-wrap .content p {
+  font-style: italic;
+}
+#page-wrap .myBtn {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 3em;
+}
+#page-wrap .btn:focus {
+  box-shadow: 0 0 0 transparent;
+}
+#page-wrap .btn-green {
+  width: 170px;
+  height: 50px;
+  border-radius: 2px;
+}
+#page-wrap .btn-transparent {
+  color: #ffffff;
+  font-style: underline;
+  background: none;
+}
+#page-wrap .fluid {
+  margin: 3em 0;
+}
+
+@media screen and (max-width: 992px) {
+  #page-wrap .content p {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

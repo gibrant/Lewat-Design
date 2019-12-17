@@ -1,0 +1,101 @@
+// Popup Style
+body{
+    #myModal1,#myModal2,#myModal3{
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .modal-dialog{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 547px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: auto;
+        .modal-content{
+            padding: 2em 4em;
+            margin: 17px;
+            .modal-header{
+                border: none;
+                img{
+                    width: 50%;
+                    height: auto;
+                    position: relative;
+                    margin: auto;
+                }
+                .email_img{
+                    width: 120px;
+                    height: auto;
+                    position: relative;
+                    margin: auto;
+                }
+                .close{
+                    top: -8px;
+                    right: -8px;
+                    margin: 0;
+                    padding: 0;
+                    border: 2px solid $white;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    opacity: 1;
+                    color: $white;
+                    font-size: 14px;
+                    background-color: #00beff;
+                    @include border-radius(50%);
+                }
+                .close:focus{
+                    @include box-shadow(0 0 0 transparent);
+                    outline: none;
+                }
+            }
+            .modal-body{
+                p{
+                    font-size: 18px;
+                    a{
+                        color: $bluesky;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .modal-footer{
+                border: none;
+                justify-content: flex-start;
+                .btn-blue {
+                    width: 130px;
+                    height: 50px;
+                    border-radius: 2px;
+                    box-shadow: 0 5px 15px 0 rgba(0, 190, 255, 0.25);
+                    background-color: #00beff;
+                    border: none;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    letter-spacing: 1.0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 478px){
+    body{
+        .modal-dialog{
+            .modal-content{
+                padding: 2em;
+            }
+        }
+    }
+}
+.popup.test{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    overflow-x: none !important;
+    overflow-y: none !important;
+    display: block;
+}

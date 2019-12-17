@@ -1,0 +1,71 @@
+// Typhography
+h1{
+    font-size: 28px;
+}
+h2{
+    font-size: 24px;
+}
+h3{
+    font-size: 22px;
+    line-height: 1.3em;
+}
+h4{
+    font-size: 20px;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 16px;
+    line-height: 1.5em;
+}
+small{
+    font-size: 14px;
+}
+blockquote{
+    font-style: italic;
+    color: $grey; 
+}
+@media screen and (min-width: 425px){
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    h4{
+        font-size: 22px;
+    }
+    h5{
+        font-size: 20px;
+    }
+    h6{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 768px){
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 20px;
+    }
+    h6{
+        font-size: 18px;
+    }
+    small{
+        font-size: 16px;
+    }
+}

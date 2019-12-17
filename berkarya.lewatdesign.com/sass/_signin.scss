@@ -1,0 +1,108 @@
+// CSS for Login Form
+.loginForm{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .attention{
+        background: url(../assets/images/signin/BG--Sign-In.png);
+        background-position: bottom;
+        background-size: cover;
+        width: 35%;
+        height: auto;
+        color: $white;
+        p{
+            font-size: 14px;
+        }
+        a{
+            color: $white;
+            text-decoration: underline;
+            font-style: italic;
+        }
+        a:hover{
+            color: $verylightgrey;
+            font-style: italic;
+        }
+    }
+    .fluid{
+        padding: 3em 0 0 0;
+    }
+    .quote{
+        margin: .5em 0 .5em 0;
+        text-decoration: underline;
+    }
+    .content{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        img{
+            width: 165px;
+            height: auto;
+            margin: 2em 0
+        }
+    }
+    .hadits{
+        margin: 0 0 .5em 0;
+    }
+    .web-link{
+        margin: 2em 0 .5em 0;
+    }
+    .login{
+        flex: 1;
+    }
+    .form-login{
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        h3{
+            font-weight: normal;
+        }
+        p{
+            font-size: 14px;
+        }
+        a{
+            color: $grey;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        a:hover{
+            color: $darkgrey;
+        }
+        .login-group{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        label{
+            font-size: 14px;
+        }
+        .blur{
+            opacity: .5;
+            font-size: 14px;
+        }
+        .btn-cyan{
+            background-color: $bluesky;
+            color: $white;
+            font-size: 20px;
+            border: none;
+        }
+        .btn-cyan:focus{
+            box-shadow: 0 0 0 transparent
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    .loginForm{
+        flex-direction: column;
+        .attention{
+            width: 100%;
+            height: auto;
+            .form-login{
+                width: 70%;
+            }
+        }
+        .fluid{
+            padding: 3em 0;
+        }
+    }
+}
